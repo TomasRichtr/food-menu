@@ -38,7 +38,7 @@
     font-size: 1.2rem;
     color: #b89b84;
     font-weight: 500;
-    animation: textPulse 2s ease-in-out infinite;
+    animation: text-pulse 2s ease-in-out infinite;
     margin: 0;
     letter-spacing: 0.5px;
 }
@@ -55,7 +55,7 @@
     }
 }
 
-@keyframes textPulse {
+@keyframes text-pulse {
     0%, 100% {
         opacity: 0.7;
     }
