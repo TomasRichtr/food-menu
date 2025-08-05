@@ -2,7 +2,7 @@ import { dirname } from "path";
 import { fileURLToPath } from "url";
 
 import { FlatCompat } from "@eslint/eslintrc";
-import * as reactHooks from "typescript-eslint";
+import tseslint from "typescript-eslint";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -13,9 +13,9 @@ const compat = new FlatCompat({
 
 const eslintConfig = [
   ...compat.extends("next/core-web-vitals", "next/typescript"),
+  ...tseslint.configs.recommended,
   {
     rules: {
-      ...reactHooks.configs.recommended.rules,
       '@typescript-eslint/no-unused-vars': ['error', {
         varsIgnorePattern: '^[A-Z_]',
         argsIgnorePattern: '^_',
@@ -36,22 +36,22 @@ const eslintConfig = [
       'arrow-spacing': 'error',
       'object-curly-newline': ['error', {
         ObjectExpression: {
- multiline: true,
-minProperties: 1 
-},
+          multiline: true,
+          minProperties: 1
+        },
         ObjectPattern: {
- multiline: true,
-minProperties: 1 
-},
+          multiline: true,
+          minProperties: 1
+        },
         ImportDeclaration: 'never',
         ExportDeclaration: {
- multiline: true,
-minProperties: 1 
-},
+          multiline: true,
+          minProperties: 1
+        },
       }],
       'object-property-newline': ['error', {
- allowAllPropertiesOnSameLine: false 
-}],
+        allowAllPropertiesOnSameLine: false
+      }],
 
       'react/prop-types': 'off',
       'react/react-in-jsx-scope': 'off',
@@ -75,12 +75,18 @@ minProperties: 1
       'react/require-render-return': 'error',
       'react/self-closing-comp': 'error',
       'react/jsx-max-props-per-line': ['error', {
- maximum: 1 
-}],
+        maximum: 1,
+        when: 'always'
+      }],
       'react/jsx-first-prop-new-line': ['error', 'always'],
       'react/jsx-closing-bracket-location': ['error', 'tag-aligned'],
+      'react/jsx-tag-spacing': ['error', {
+        closingSlash: 'never',
+        beforeSelfClosing: 'always',
+        afterOpening: 'never',
+        beforeClosing: 'never'
+      }],
       'react/jsx-indent-props': ['error', 2],
-      'react/jsx-indent': ['error', 2],
       'react/jsx-indent': ['error', 2],
       'react/jsx-wrap-multilines': ['error', {
         declaration: 'parens-new-line',
@@ -99,6 +105,8 @@ minProperties: 1
       'import/no-self-import': 'error',
       'import/no-cycle': 'error',
       'import/no-useless-path-segments': 'error',
+      'indent': ['error', 2],
+      'semi': ['error', 'always'],
       'import/order': ['error', {
         'groups': [
           'builtin',
