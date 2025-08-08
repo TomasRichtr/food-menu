@@ -1,5 +1,4 @@
 import Link from "next/link";
-import {Suspense} from "react";
 
 import MealsGrid from "@/components/meals/mealsGrid";
 import {LoadingSection} from "@/components/shared/loadingSection";
@@ -7,6 +6,12 @@ import {ROUTE} from "@/constants/route";
 import {getMeals} from "@/lib/meals";
 
 import classes from "./page.module.css";
+
+export const metadata = {
+  title: 'All Meals',
+  description: 'Discover all the meals we have for you',
+
+};
 
 const Meals = async () => {
   const meals = await getMeals();

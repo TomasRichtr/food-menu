@@ -12,6 +12,24 @@ interface MealPageProps {
   }>;
 }
 
+export const generateMetadata = async ({
+  params
+}: MealPageProps) => {
+  const {
+    slug
+  } = await params;
+  const meal = await getMeal(slug);
+
+  if (!meal) {
+    notFound();
+  }
+
+  return {
+    title: meal.title,
+    description: meal.summary,
+  };
+};
+
 const MealPage = async ({
   params
 }: MealPageProps) => {
