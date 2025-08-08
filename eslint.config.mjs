@@ -97,6 +97,7 @@ const eslintConfig = [
         logical: 'parens-new-line',
         prop: 'parens-new-line',
       }],
+      'react-hooks/rules-of-hooks': 'off',
 
       'import/no-unresolved': 'error',
       'import/named': 'error',

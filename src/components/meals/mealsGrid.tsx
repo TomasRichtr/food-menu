@@ -1,7 +1,6 @@
 import MealItem from "@/components/meals/mealItem";
 import classes from "@/components/meals/mealsGrid.module.css";
-
-import {Meals} from "../../../types/meal";
+import {Meals} from "@/types/meal";
 
 interface MealsGridProps {
   meals: Meals

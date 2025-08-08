@@ -1,6 +1,6 @@
 import {ReactNode, Suspense} from "react";
 
-import Loader from "@/components/loader";
+import Loader from "@/components/shared/loader";
 
 import classes from "./loadingSection.module.css";
 

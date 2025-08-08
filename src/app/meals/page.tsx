@@ -1,12 +1,10 @@
 import Link from "next/link";
 import {Suspense} from "react";
 
-import Loader from "@/components/loader";
-import {LoadingSection} from "@/components/loadingSection";
 import MealsGrid from "@/components/meals/mealsGrid";
+import {LoadingSection} from "@/components/shared/loadingSection";
 import {ROUTE} from "@/constants/route";
-
-import {getMeals} from "../../../lib/meals";
+import {getMeals} from "@/lib/meals";
 
 import classes from "./page.module.css";
 

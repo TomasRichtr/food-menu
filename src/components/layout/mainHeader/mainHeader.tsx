@@ -2,9 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 import logoImg from "@/assets/logo.png";
-import classes from "@/components/mainHeader/mainHeader.module.css";
-import {MainHeaderBackground} from "@/components/mainHeader/mainHeaderBackground";
-import NavLink from "@/components/navLink";
+import classes from "@/components/layout/mainHeader/mainHeader.module.css";
+import {MainHeaderBackground} from "@/components/layout/mainHeader/mainHeaderBackground";
+import NavLink from "@/components/shared/navLink";
 import {ROUTE} from "@/constants/route";
 
 

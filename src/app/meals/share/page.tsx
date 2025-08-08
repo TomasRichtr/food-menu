@@ -1,9 +1,31 @@
-const SharePage = () => {
+import MealForm from "@/components/share/mealForm";
+
+import classes from './page.module.css';
+
+const ShareMealPage = () => {
   return (
-    <h1>
-      meals
-    </h1>
+    <>
+      <header
+        className={classes.header}
+      >
+        <h1>
+          Share your
+          <span
+            className={classes.highlight}
+          >
+            {' '}favorite meal
+          </span>
+        </h1>
+        <p>Or any other meal you feel needs sharing!</p>
+      </header>
+
+      <main
+        className={classes.main}
+      >
+        <MealForm />
+      </main>
+    </>
   );
 };
 
-export default SharePage;
+export default ShareMealPage;
