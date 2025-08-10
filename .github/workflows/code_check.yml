@@ -8,7 +8,10 @@ on:
 
 env:
   NODE_VERSION: 22.17.0
-  AWS_BUCKET_URL: tomas-richtr-food-menu.s3.amazonaws.com
+  AWS_BUCKET_URL: fake-bucket.s3.amazonaws.com
+  AWS_ACCESS_KEY_ID: fake-key-id
+  AWS_SECRET_ACCESS_KEY: fake-secret-access-key
+  AWS_BUCKET_NAME: fake-bucket
 
 jobs:
   code_check:
