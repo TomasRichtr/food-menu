@@ -106,7 +106,26 @@ const eslintConfig = [
       "import/no-self-import": "error",
       "import/no-cycle": "error",
       "import/no-useless-path-segments": "error",
-      "indent": ["error", 2],
+      "indent": ["error", 2, {
+        "ignoredNodes": [
+          "JSXElement",
+          "JSXElement > *",
+          "JSXAttribute",
+          "JSXIdentifier",
+          "JSXNamespacedName",
+          "JSXMemberExpression",
+          "JSXSpreadAttribute",
+          "JSXExpressionContainer",
+          "JSXOpeningElement",
+          "JSXClosingElement",
+          "JSXFragment",
+          "JSXOpeningFragment",
+          "JSXClosingFragment",
+          "JSXText",
+          "JSXEmptyExpression",
+          "JSXSpreadChild"
+        ]
+      }],
       "semi": ["error", "always"],
       "import/order": ["error", {
         "groups": [
