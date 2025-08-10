@@ -8,8 +8,8 @@ import {getMeals} from "@/lib/meals";
 import classes from "./page.module.css";
 
 export const metadata = {
-  title: 'All Meals',
-  description: 'Discover all the meals we have for you',
+  title: "All Meals",
+  description: "Discover all the meals we have for you",
 
 };
 
@@ -30,7 +30,7 @@ const MealsPage = () => {
         className={classes.header}
       >
         <h1>
-          Delicious meals, created{' '}
+          Delicious meals, created{" "}
           <span
             className={classes.highlight}
           >

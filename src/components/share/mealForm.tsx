@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import {useActionState} from "react";
 
 import classes from "@/app/meals/share/page.module.css";
@@ -8,13 +8,13 @@ import {shareMeal} from "@/lib/action";
 
 const MealForm = () => {
   const [state, formAction] = useActionState(shareMeal, {
-    message: '',
+    message: "",
     data: {
-      title: '',
-      summary: '',
-      instructions: '',
-      creator: '',
-      creator_email: ''
+      title: "",
+      summary: "",
+      instructions: "",
+      creator: "",
+      creator_email: ""
     }
   });
 
@@ -36,7 +36,7 @@ const MealForm = () => {
             type="text"
             id="name"
             name="name"
-            defaultValue={state.data?.creator || ''}
+            defaultValue={state.data?.creator || ""}
             required
           />
         </p>
@@ -48,7 +48,7 @@ const MealForm = () => {
             type="email"
             id="email"
             name="email"
-            defaultValue={state.data?.creator_email || ''}
+            defaultValue={state.data?.creator_email || ""}
             required
           />
         </p>
@@ -61,7 +61,7 @@ const MealForm = () => {
           type="text"
           id="title"
           name="title"
-          defaultValue={state.data?.title || ''}
+          defaultValue={state.data?.title || ""}
           required
         />
       </p>
@@ -73,7 +73,7 @@ const MealForm = () => {
           type="text"
           id="summary"
           name="summary"
-          defaultValue={state.data?.summary || ''}
+          defaultValue={state.data?.summary || ""}
           required
         />
       </p>
@@ -87,7 +87,7 @@ const MealForm = () => {
           id="instructions"
           name="instructions"
           rows={10}
-          defaultValue={state.data?.instructions || ''}
+          defaultValue={state.data?.instructions || ""}
           required
         />
       </p>

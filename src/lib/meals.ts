@@ -1,5 +1,3 @@
-import fs from 'node:fs';
-
 import sql from "better-sqlite3";
 import slugify from "slugify";
 import xss from "xss";
@@ -32,7 +30,7 @@ export const addMeal = async (newMeal: NewMeal) => {
     fileBuffer: bufferedImage
   });
 
-  const dbMeal: Omit<Meal, 'id'> = {
+  const dbMeal: Omit<Meal, "id"> = {
     title: newMeal.title,
     summary: newMeal.summary,
     instructions,

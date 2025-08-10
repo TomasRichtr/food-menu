@@ -69,7 +69,7 @@ const MealPage = async ({
             <a
               href={`mailto:${meal.creator_email}`}
             >
-              {' '}
+              {" "}
               {meal.creator}
             </a>
           </p>

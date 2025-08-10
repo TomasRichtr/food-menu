@@ -20,15 +20,15 @@ export const MainHeaderBackground = () => {
             <stop
               offset="0%"
               style={{
-                stopColor: '#59453c',
-                stopOpacity: '1',
+                stopColor: "#59453c",
+                stopOpacity: "1",
               }}
             />
             <stop
               offset="100%"
               style={{
-                stopColor: '#8f3a09',
-                stopOpacity: '1',
+                stopColor: "#8f3a09",
+                stopOpacity: "1",
               }}
             />
           </linearGradient>

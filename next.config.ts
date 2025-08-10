@@ -4,10 +4,10 @@ const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: 'https',
+        protocol: "https",
         hostname: process.env.AWS_BUCKET_URL!,
-        port: '',
-        pathname: '/**',
+        port: "",
+        pathname: "/**",
       },
     ],
   },

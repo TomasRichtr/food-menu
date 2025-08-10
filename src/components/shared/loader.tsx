@@ -1,4 +1,4 @@
-import classes from './loader.module.css';
+import classes from "./loader.module.css";
 
 interface LoaderProps {
   text?: string;

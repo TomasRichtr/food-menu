@@ -1,6 +1,6 @@
 import MealForm from "@/components/share/mealForm";
 
-import classes from './page.module.css';
+import classes from "./page.module.css";
 
 const ShareMealPage = () => {
   return (
@@ -13,7 +13,7 @@ const ShareMealPage = () => {
           <span
             className={classes.highlight}
           >
-            {' '}favorite meal
+            {" "}favorite meal
           </span>
         </h1>
         <p>Or any other meal you feel needs sharing!</p>

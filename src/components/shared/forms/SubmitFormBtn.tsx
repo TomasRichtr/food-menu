@@ -1,13 +1,9 @@
-'use client';
+"use client";
 
 import {useFormStatus} from "react-dom";
 
-interface SubmitFormBtnProps {
-  submitLabel?: string;
-}
-
 const SubmitFormBtn = ({
-  submitLabel = 'Submit'
+  submitLabel = "Submit"
 }) => {
   const {
     pending
@@ -18,7 +14,7 @@ const SubmitFormBtn = ({
       disabled={pending}
       type="submit"
     >
-      {pending ? 'Submitting...' : submitLabel}
+      {pending ? "Submitting..." : submitLabel}
     </button>
   );
 };
