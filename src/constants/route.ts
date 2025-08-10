@@ -1,7 +1,7 @@
 export const ROUTE = {
   HOME: "/",
   MEALS: "/meals",
-  MEAL: (mealId: string) => `/meals/${mealId}`,
+  MEAL: (slug: string) => `/meals/${slug}`,
   SHARE: "/meals/share",
   COMMUNITY: "/community",
 };
