@@ -8,6 +8,7 @@ on:
 
 env:
   NODE_VERSION: 22.17.0
+  AWS_BUCKET_URL: tomas-richtr-food-menu.s3.amazonaws.com
 
 jobs:
   code_check:
