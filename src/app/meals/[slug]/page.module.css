@@ -43,14 +43,12 @@
 .creator a {
     background: linear-gradient(90deg, #f9572a, #ff8a05);
     background-clip: text;
-    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .creator a:hover,
 .creator a:active {
     background: linear-gradient(90deg, #f9572a, #ff8a05);
-    background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 0 0 18px rgb(248 190 42 / 80%);
