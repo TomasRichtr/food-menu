@@ -1,9 +1,15 @@
 import Link from "next/link";
 
 import MealsGrid from "@/components/meals/mealsGrid";
-import {LoadingSection} from "@/components/shared/loadingSection";
-import {ROUTE} from "@/constants/route";
-import {getMeals} from "@/lib/meals";
+import {
+  LoadingSection,
+} from "@/components/shared/loadingSection";
+import {
+  ROUTE,
+} from "@/constants/route";
+import {
+  getMeals,
+} from "@/lib/meals";
 
 import classes from "./page.module.css";
 

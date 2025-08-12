@@ -1,7 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import {useRef, useState} from "react";
+import {
+  useRef, useState,
+} from "react";
 
 import classes from "./imagePicker.module.css";
 
@@ -12,7 +14,7 @@ interface ImagePickerProps {
 
 const ImagePicker = ({
   label,
-  name
+  name,
 }: ImagePickerProps) => {
   const imageInputRef = useRef<HTMLInputElement>(null);
 

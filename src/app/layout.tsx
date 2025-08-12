@@ -1,6 +1,10 @@
 import "./globals.css";
-import {Metadata} from "next";
-import { ReactNode } from "react";
+import {
+  Metadata,
+} from "next";
+import {
+  ReactNode,
+} from "react";
 
 import MainHeader from "@/components/layout/mainHeader/mainHeader";
 

@@ -1,14 +1,20 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import {useAWSBucket} from "@/composables/useAWSBucket";
-import {ROUTE} from "@/constants/route";
-import {Meal} from "@/types/meal";
+import {
+  useAWSBucket,
+} from "@/composables/useAWSBucket";
+import {
+  ROUTE,
+} from "@/constants/route";
+import {
+  Meal,
+} from "@/types/meal";
 
 import classes from "./mealItem.module.css";
 
 export default function MealItem({
-  title, slug, image, summary, creator
+  title, slug, image, summary, creator,
 }: Meal) {
   return (
     <article

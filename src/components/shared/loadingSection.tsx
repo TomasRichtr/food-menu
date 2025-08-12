@@ -1,4 +1,6 @@
-import {ReactNode, Suspense} from "react";
+import {
+  ReactNode, Suspense,
+} from "react";
 
 import Loader from "@/components/shared/loader";
 
@@ -12,7 +14,7 @@ interface LoadingSectionProps {
 
 export const LoadingSection = ({
   children,
-  loadingText
+  loadingText,
 }: LoadingSectionProps) => {
   return (
     <section

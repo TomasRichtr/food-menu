@@ -5,7 +5,7 @@ interface LoaderProps {
 }
 
 const Loader = ({
-  text
+  text,
 }: LoaderProps) => {
   return (
     <div

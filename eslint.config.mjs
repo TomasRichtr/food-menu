@@ -1,7 +1,13 @@
-import { dirname } from "path";
-import { fileURLToPath } from "url";
+import {
+  dirname,
+} from "path";
+import {
+  fileURLToPath,
+} from "url";
 
-import { FlatCompat } from "@eslint/eslintrc";
+import {
+  FlatCompat,
+} from "@eslint/eslintrc";
 import tseslint from "typescript-eslint";
 
 const __filename = fileURLToPath(import.meta.url);
@@ -34,24 +40,10 @@ const eslintConfig = [
       "prefer-template": "error",
       "object-shorthand": "error",
       "arrow-spacing": "error",
-      "object-curly-newline": ["error", {
-        ObjectExpression: {
-          multiline: true,
-          minProperties: 1
-        },
-        ObjectPattern: {
-          multiline: true,
-          minProperties: 1
-        },
-        ImportDeclaration: "never",
-        ExportDeclaration: {
-          multiline: true,
-          minProperties: 1
-        },
-      }],
       "object-property-newline": ["error", {
-        allowAllPropertiesOnSameLine: false
+        allowAllPropertiesOnSameLine: false,
       }],
+      "import/newline-after-import": "error",
 
       "react/prop-types": "off",
       "react/react-in-jsx-scope": "off",
@@ -76,7 +68,7 @@ const eslintConfig = [
       "react/self-closing-comp": "error",
       "react/jsx-max-props-per-line": ["error", {
         maximum: 1,
-        when: "always"
+        when: "always",
       }],
       "react/jsx-first-prop-new-line": ["error", "always"],
       "react/jsx-closing-bracket-location": ["error", "tag-aligned"],
@@ -84,7 +76,7 @@ const eslintConfig = [
         closingSlash: "never",
         beforeSelfClosing: "always",
         afterOpening: "never",
-        beforeClosing: "never"
+        beforeClosing: "never",
       }],
       "react/jsx-indent-props": ["error", 2],
       "react/jsx-indent": ["error", 2],
@@ -123,8 +115,8 @@ const eslintConfig = [
           "JSXClosingFragment",
           "JSXText",
           "JSXEmptyExpression",
-          "JSXSpreadChild"
-        ]
+          "JSXSpreadChild",
+        ],
       }],
       "semi": ["error", "always"],
       "import/order": ["error", {
@@ -142,6 +134,21 @@ const eslintConfig = [
           "caseInsensitive": true,
         },
       }],
+      "object-curly-newline": ["error", {
+        ObjectExpression: {
+          multiline: true,
+          minProperties: 1,
+        },
+        ObjectPattern: {
+          multiline: true,
+          minProperties: 1,
+        },
+        ImportDeclaration: "always",
+        ExportDeclaration: {
+          multiline: true,
+          minProperties: 1,
+        },
+      }],
 
       "jsx-a11y/alt-text": "error",
       "jsx-a11y/anchor-has-content": "error",
@@ -151,6 +158,8 @@ const eslintConfig = [
       "jsx-a11y/img-redundant-alt": "error",
       "jsx-a11y/no-access-key": "error",
       "quotes": ["error", "double"],
+      "no-multi-spaces": "error",
+      "comma-dangle": ["error", "always-multiline"],
     },
   },
 ];

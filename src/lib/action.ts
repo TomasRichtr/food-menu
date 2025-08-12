@@ -1,18 +1,26 @@
 "use server";
 
 import Joi from "joi";
-import {revalidatePath} from "next/cache";
-import {redirect} from "next/navigation";
+import {
+  revalidatePath,
+} from "next/cache";
+import {
+  redirect,
+} from "next/navigation";
 
-import {addMeal} from "@/lib/meals";
-import {NewMeal} from "@/types/meal";
+import {
+  addMeal,
+} from "@/lib/meals";
+import {
+  NewMeal,
+} from "@/types/meal";
 
 export const shareMeal = async (
   prevState: {
     message: string,
     data?: {title: string, summary: string, instructions: string, creator: string, creator_email: string }
   },
-  formData: FormData
+  formData: FormData,
 ) => {
   const meal: NewMeal = {
     title: formData.get("title") as string,
@@ -37,7 +45,7 @@ export const shareMeal = async (
           instructions: meal.instructions,
           creator: meal.creator,
           creator_email: meal.creator_email,
-        }
+        },
       };
     }
     throw err;
@@ -49,13 +57,13 @@ export const shareMeal = async (
 const validateNew = async (newMeal: NewMeal) => {
   await Joi.object({
     title: Joi.string().min(1).max(255).messages({
-      "string.max": "Meal title can`t exceed 255 characters"
+      "string.max": "Meal title can`t exceed 255 characters",
     }),
     summary: Joi.string().min(1).max(1275).messages({
-      "string.max": "Meal summary can`t exceed 1275 characters"
+      "string.max": "Meal summary can`t exceed 1275 characters",
     }),
     instructions: Joi.string().min(1).max(2550).messages({
-      "string.max": "Meal instructions can`t exceed 2550 characters"
+      "string.max": "Meal instructions can`t exceed 2550 characters",
     }),
     image: Joi.custom((value, helpers) => {
       if (!(value instanceof File)) {
@@ -75,14 +83,14 @@ const validateNew = async (newMeal: NewMeal) => {
       "any.invalid": "Image must be a file",
       "file.empty": "Image file cannot be empty",
       "file.tooLarge": "Image file cannot exceed 5MB",
-      "file.notImage": "File must be an image"
+      "file.notImage": "File must be an image",
     }),
     creator: Joi.string().min(1).max(255).messages({
-      "string.max": "Creator name can`t exceed 255 characters"
+      "string.max": "Creator name can`t exceed 255 characters",
     }),
     creator_email: Joi.string().email().max(255).messages({
       "string.email": "Please enter a valid email address",
-      "string.max": "Creator email can`t exceed 255 characters"
+      "string.max": "Creator email can`t exceed 255 characters",
     }),
   }).validateAsync(newMeal);
 };

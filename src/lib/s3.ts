@@ -1,7 +1,9 @@
-import { S3 } from "@aws-sdk/client-s3";
+import {
+  S3,
+} from "@aws-sdk/client-s3";
 
 const s3 = new S3({
-  region: "eu-north-1"
+  region: "eu-north-1",
 });
 
 interface FileUpload {
@@ -11,7 +13,7 @@ interface FileUpload {
 }
 
 export const uploadMealImage = async ({
-  fileName, fileType, fileBuffer
+  fileName, fileType, fileBuffer,
 }: FileUpload) => {
   s3.putObject({
     Bucket: process.env.AWS_BUCKET_NAME,

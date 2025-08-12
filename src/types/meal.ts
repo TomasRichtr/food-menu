@@ -23,5 +23,5 @@ type Meals = Meal[];
 export type {
   Meal,
   Meals,
-  NewMeal
+  NewMeal,
 };

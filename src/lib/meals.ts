@@ -2,8 +2,12 @@ import sql from "better-sqlite3";
 import slugify from "slugify";
 import xss from "xss";
 
-import {uploadMealImage} from "@/lib/s3";
-import {Meal, Meals, NewMeal} from "@/types/meal";
+import {
+  uploadMealImage,
+} from "@/lib/s3";
+import {
+  Meal, Meals, NewMeal,
+} from "@/types/meal";
 
 const db = sql("meals.db");
 
@@ -17,7 +21,7 @@ export const getMeal = async (slug: string): Promise<Meal> => {
 
 export const addMeal = async (newMeal: NewMeal) => {
   const slug = slugify(newMeal.title, {
-    lower: true
+    lower: true,
   });
   const instructions = xss(newMeal.instructions);
   const extension = newMeal.image.name.split(".").pop();
@@ -27,7 +31,7 @@ export const addMeal = async (newMeal: NewMeal) => {
   await uploadMealImage({
     fileName: imageName,
     fileType: newMeal.image.type,
-    fileBuffer: bufferedImage
+    fileBuffer: bufferedImage,
   });
 
   const dbMeal: Omit<Meal, "id"> = {
@@ -37,7 +41,7 @@ export const addMeal = async (newMeal: NewMeal) => {
     creator: newMeal.creator,
     creator_email: newMeal.creator_email,
     image: imageName,
-    slug
+    slug,
   };
 
   db.prepare(`

@@ -1,7 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import {
+  useEffect, useState,
+} from "react";
 
 import burgerImg from "@/assets/burger.jpg";
 import curryImg from "@/assets/curry.jpg";
@@ -16,31 +18,31 @@ import classes from "./imageSlideshow.module.css";
 const images = [
   {
     image: burgerImg,
-    alt: "A delicious, juicy burger"
+    alt: "A delicious, juicy burger",
   },
   {
     image: curryImg,
-    alt: "A delicious, spicy curry"
+    alt: "A delicious, spicy curry",
   },
   {
     image: dumplingsImg,
-    alt: "Steamed dumplings"
+    alt: "Steamed dumplings",
   },
   {
     image: macncheeseImg,
-    alt: "Mac and cheese"
+    alt: "Mac and cheese",
   },
   {
     image: pizzaImg,
-    alt: "A delicious pizza"
+    alt: "A delicious pizza",
   },
   {
     image: schnitzelImg,
-    alt: "A delicious schnitzel"
+    alt: "A delicious schnitzel",
   },
   {
     image: tomatoSaladImg,
-    alt: "A delicious tomato salad"
+    alt: "A delicious tomato salad",
   },
 ];
 
@@ -50,7 +52,7 @@ export default function ImageSlideshow() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) =>
-        prevIndex < images.length - 1 ? prevIndex + 1 : 0
+        prevIndex < images.length - 1 ? prevIndex + 1 : 0,
       );
     }, 1500);
 

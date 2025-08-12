@@ -1,10 +1,14 @@
 "use client";
-import {useActionState} from "react";
+import {
+  useActionState,
+} from "react";
 
 import classes from "@/app/meals/share/page.module.css";
 import ImagePicker from "@/components/shared/forms/imagePicker";
 import SubmitFormBtn from "@/components/shared/forms/SubmitFormBtn";
-import {shareMeal} from "@/lib/action";
+import {
+  shareMeal,
+} from "@/lib/action";
 
 const MealForm = () => {
   const [state, formAction] = useActionState(shareMeal, {
@@ -14,8 +18,8 @@ const MealForm = () => {
       summary: "",
       instructions: "",
       creator: "",
-      creator_email: ""
-    }
+      creator_email: "",
+    },
   });
 
   return (

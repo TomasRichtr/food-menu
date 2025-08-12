@@ -1,12 +1,14 @@
 "use client";
 
-import {useFormStatus} from "react-dom";
+import {
+  useFormStatus,
+} from "react-dom";
 
 const SubmitFormBtn = ({
-  submitLabel = "Submit"
+  submitLabel = "Submit",
 }) => {
   const {
-    pending
+    pending,
   } = useFormStatus();
 
   return (

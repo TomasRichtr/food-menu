@@ -1,8 +1,14 @@
 import Image from "next/image";
-import {notFound} from "next/navigation";
+import {
+  notFound,
+} from "next/navigation";
 
-import {useAWSBucket} from "@/composables/useAWSBucket";
-import {getMeal} from "@/lib/meals";
+import {
+  useAWSBucket,
+} from "@/composables/useAWSBucket";
+import {
+  getMeal,
+} from "@/lib/meals";
 
 import classes from "./page.module.css";
 
@@ -13,10 +19,10 @@ interface MealPageProps {
 }
 
 export const generateMetadata = async ({
-  params
+  params,
 }: MealPageProps) => {
   const {
-    slug
+    slug,
   } = await params;
   const meal = await getMeal(slug);
 
@@ -31,10 +37,10 @@ export const generateMetadata = async ({
 };
 
 const MealPage = async ({
-  params
+  params,
 }: MealPageProps) => {
   const {
-    slug
+    slug,
   } = await params;
   const meal = await getMeal(slug);
 
@@ -84,7 +90,7 @@ const MealPage = async ({
         <p
           className={classes.instructions}
           dangerouslySetInnerHTML={{
-            __html: meal.instructions
+            __html: meal.instructions,
           }}
         />
       </main>

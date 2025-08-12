@@ -1,7 +1,9 @@
-import {ReactNode} from "react";
+import {
+  ReactNode,
+} from "react";
 
 const MealsLayout = ({
-  children
+  children,
 }: {children: ReactNode}) => {
   return (
     <>
